@@ -1,6 +1,7 @@
 # Lab 3: Component Tree. Hooks
 
 ## Component Tree + Data Flow
+`````
 App (composition root, no state)
 │
 └── TodoList (state: [todos] - масив об'єктів { id, task })
@@ -15,6 +16,7 @@ App (composition root, no state)
 │
 ├── [Checkbox] toggle → updates local state (isCompleted) - змінює стиль завдання (перекреслення)
 └── [Delete Button] ↑ onDelete(id) - child → parent: просить TodoList видалити завдання за id
+`````
 
 ### Пояснення діаграми
 - **App**: Кореневий компонент, який рендерить лише `TodoList`. Не тримає стану, відповідає за композицію.
