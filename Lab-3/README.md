@@ -18,21 +18,6 @@ App (composition root, no state)
 └── [Delete Button] ↑ onDelete(id) - child → parent: просить TodoList видалити завдання за id
 `````
 
-```mermaid
-graph TD
-    A[App<br>No state] --> B[TodoList<br>State: todos (array {id, task})<br>Props: none]
-    B --> C[AddTodoForm<br>State: newTask (string)<br>Props: onAddTodo (callback)]
-    B --> D[TodoItem<br>State: isCompleted (boolean)<br>Props: id, task, onDelete (callback)]
-    C -->|Callback: onAddTodo(newTask)| B
-    D -->|Callback: onDelete(id)| B
-    D --> E[Checkbox<br>Toggles isCompleted]
-    D --> F[Delete Button<br>Triggers onDelete(id)]
-    classDef component fill:#f9fafb,stroke:#3b82f6,stroke-width:2px;
-    class A,B,C,D component;
-    classDef element fill:#e5e7eb,stroke:#ef4444,stroke-width:1px;
-    class E,F element;
-```
-
 ### Пояснення діаграми
 - **App**: Кореневий компонент, який рендерить лише `TodoList`. Не тримає стану, відповідає за композицію.
 - **TodoList**:
