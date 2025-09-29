@@ -4,9 +4,21 @@
 ```mermaid
 graph TD
     App["App(composition root)no state"]
-    TodoList["TodoList━━━━━━━━━━━━━━STATE:• todos: [{id, task}]━━━━━━━━━━━━━━METHODS:• handleAddTodo(newTask)• handleDeleteTodo(id)"]
-    AddTodoForm["AddTodoForm━━━━━━━━━━━━━━STATE:• newTask: string━━━━━━━━━━━━━━PROPS:• onAddTodo()"]
-    TodoItem["TodoItem━━━━━━━━━━━━━━STATE:• isCompleted: boolean━━━━━━━━━━━━━━PROPS:• id• task• onDelete()"]
+    TodoList["TodoList
+    ━━━━━━━━━━━━━━
+    STATE:• todos: [{id, task}]
+    ━━━━━━━━━━━━━━
+    METHODS:• handleAddTodo(newTask)• handleDeleteTodo(id)"]
+    AddTodoForm["AddTodoForm
+    ━━━━━━━━━━━━━━
+    STATE:• newTask: string
+    ━━━━━━━━━━━━━━
+    PROPS:• onAddTodo()"]
+    TodoItem["TodoItem
+    ━━━━━━━━━━━━━━
+    STATE:• isCompleted: boolean
+    ━━━━━━━━━━━━━━
+    PROPS:• id• task• onDelete()"]
     Checkbox["[Checkbox]toggle isCompleted(локальна зміна стилю)"]
     DeleteBtn["[Delete Button]onClick"]
     App -->|renders| TodoList
